@@ -1,6 +1,5 @@
 'use strict';
 const Client = require('dicksword.js');
-Client.login(process.env.BOT_TOKEN);
 const fs = require('fs');
 const info = {};
 const bot = new Client({
