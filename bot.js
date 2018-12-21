@@ -1,10 +1,10 @@
 'use strict';
 const Client = require('dicksword.js');
+Client.login(process.env.BOT_TOKEN);
 const fs = require('fs');
 const info = {};
-info.config = require('./config.json');
 const bot = new Client({
-  token: info.config.api.discord_token,
+  token: process.env.BOT_TOKEN,
   autorun: true,
   cacheOfflineUsers: true,
   game: {name: "Try <help ❤"}});
@@ -192,3 +192,4 @@ function disabled(details)
     console.log(err);
   });
 }
+
